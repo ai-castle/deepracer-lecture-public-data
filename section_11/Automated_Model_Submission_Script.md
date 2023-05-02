@@ -9,6 +9,7 @@ ModelName="my-first-model"
 pip3 install deepracer-utils
 python3 -m deepracer install-cli --force
 
+# Loop
 while true
 do
   # Get model ARN
