@@ -1,4 +1,4 @@
-# Creating a Compressed File of an S3 Folder in CloudShell
+# Compress File of S3 Folder in CloudShell
 
 
 ```shell
