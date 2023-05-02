@@ -2,8 +2,13 @@
 
 ```bash
 # Set variables
-LEADERBOARD_ARN="arn:aws:deepracer:::leaderboard/02220ebb-d31b-4ee4-856e-091d0277e874"
 ModelName="my-first-model"
+LEADERBOARD_URL="https://us-east-1.console.aws.amazon.com/deepracer/home?region=us-east-1#league/arn%3Aaws%3Adeepracer%3A%3A%3Aleaderboard%2F02220ebb-d31b-4ee4-856e-091d0277e874"
+
+# get ARN and decode
+LEADERBOARD_ARN_ENCODED=$(echo $LEADERBOARD_URL | grep -oP '(?<=arn%3A).*$')
+LEADERBOARD_ARN=$(echo $LEADERBOARD_ARN_ENCODED | sed 's/%\([0-9A-Fa-f][0-9A-Fa-f]\)/\\x\1/g' | xargs -0 printf "%b")
+LEADERBOARD_ARN="arn:$LEADERBOARD_ARN"
 
 # install
 pip3 install deepracer-utils
@@ -26,5 +31,6 @@ do
   fi
   sleep 60 # Execute at 60 seconds intervals.
 done
+
 
 ```
