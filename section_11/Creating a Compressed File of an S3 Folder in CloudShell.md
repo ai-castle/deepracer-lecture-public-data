@@ -1,5 +1,6 @@
 # Creating a Compressed File of an S3 Folder in CloudShell
 
+
 ```shell
 # The S3 URI for the Folder Containing the DeepRacer Model
 S3_URI="s3://bucket-name/.../"
