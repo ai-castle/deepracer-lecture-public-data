@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DRfC-multi-view</title>
+    <style>
+        .images {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        }
+
+        .image {
+        width: 480px;
+        margin: 10px;
+        position: relative;
+        }
+
+        .port-input {
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <b>Public IP:</b>
+    <input type="text" id="ip-input" value="0.0.0.0">
+    <button id="update-button">Update_All</button>
+    <br><br>
+
+    <div class="images">
+        <div class="image">
+            <input type="text" id="port-1" value="8080">
+            <button id="update-1">Update</button>
+            <img id="img-1" src="" style="width: 400px;">
+        </div>
+        <div class="image">
+            <input type="text" id="port-2" value="8081">
+            <button id="update-2">Update</button>
+            <img id="img-2" src="" style="width: 400px;">
+        </div>
+        <div class="image">
+            <input type="text" id="port-3" value="8082">
+            <button id="update-3">Update</button>
+            <img id="img-3" src="" style="width: 400px;">
+        </div>
+        <div class="image">
+            <input type="text" id="port-4" value="8083">
+            <button id="update-4">Update</button>
+            <img id="img-4" src="" style="width: 400px;">
+        </div>
+        <div class="image">
+            <input type="text" id="port-5" value="8084">
+            <button id="update-5">Update</button>
+            <img id="img-5" src="" style="width: 400px;">
+        </div>
+        <div class="image">
+            <input type="text" id="port-6" value="8085">
+            <button id="update-6">Update</button>
+            <img id="img-6" src="" style="width: 400px;">
+        </div>
+        <div class="image">
+            <input type="text" id="port-7" value="8086">
+            <button id="update-7">Update</button>
+            <img id="img-7" src="" style="width: 400px;">
+        </div>
+        <div class="image">
+            <input type="text" id="port-8" value="8087">
+            <button id="update-8">Update</button>
+            <img id="img-8" src="" style="width: 400px;">
+        </div>
+        <div class="image">
+            <input type="text" id="port-9" value="8088">
+            <button id="update-9">Update</button>
+            <img id="img-9" src="" style="width: 400px;">
+        </div>
+        <div class="image">
+            <input type="text" id="port-10" value="8089">
+            <button id="update-10">Update</button>
+            <img id="img-10" src="" style="width: 400px;">
+        </div>
+    </div>
+
+</body>
+<script>
+
+    const ipInput = document.getElementById("ip-input");
+    const updateAll = document.getElementById("update-button");
+
+    const img1 = document.getElementById("img-1");
+    const img2 = document.getElementById("img-2");
+    const img3 = document.getElementById("img-3");
+    const img4 = document.getElementById("img-4");
+    const img5 = document.getElementById("img-5");
+    const img6 = document.getElementById("img-6");
+    const img7 = document.getElementById("img-7");
+    const img8 = document.getElementById("img-8");
+    const img9 = document.getElementById("img-9");
+    const img10 = document.getElementById("img-10");
+
+    const port1 = document.getElementById("port-1");
+    const port2 = document.getElementById("port-2");
+    const port3 = document.getElementById("port-3");
+    const port4 = document.getElementById("port-4");
+    const port5 = document.getElementById("port-5");
+    const port6 = document.getElementById("port-6");
+    const port7 = document.getElementById("port-7");
+    const port8 = document.getElementById("port-8");
+    const port9 = document.getElementById("port-9");
+    const port10 = document.getElementById("port-10");
+
+    updateAll.addEventListener("click", function () {
+        const ipAddress = ipInput.value;
+        img1.src = "http://" + ipAddress.trim() + ":" + port1.value + "/stream?topic=/racecar/deepracer/kvs_stream&quality=50";
+        img2.src = "http://" + ipAddress.trim() + ":" + port2.value + "/stream?topic=/racecar/deepracer/kvs_stream&quality=50";
+        img3.src = "http://" + ipAddress.trim() + ":" + port3.value + "/stream?topic=/racecar/deepracer/kvs_stream&quality=50";
+        img4.src = "http://" + ipAddress.trim() + ":" + port4.value + "/stream?topic=/racecar/deepracer/kvs_stream&quality=50";
+        img5.src = "http://" + ipAddress.trim() + ":" + port5.value + "/stream?topic=/racecar/deepracer/kvs_stream&quality=50";
+        img6.src = "http://" + ipAddress.trim() + ":" + port6.value + "/stream?topic=/racecar/deepracer/kvs_stream&quality=50";
+        img7.src = "http://" + ipAddress.trim() + ":" + port7.value + "/stream?topic=/racecar/deepracer/kvs_stream&quality=50";
+        img8.src = "http://" + ipAddress.trim() + ":" + port8.value + "/stream?topic=/racecar/deepracer/kvs_stream&quality=50";
+        img9.src = "http://" + ipAddress.trim() + ":" + port9.value + "/stream?topic=/racecar/deepracer/kvs_stream&quality=50";
+        img10.src = "http://" + ipAddress.trim() + ":" + port10.value + "/stream?topic=/racecar/deepracer/kvs_stream&quality=50";
+    });
+
+    const update1 = document.getElementById("update-1");
+    update1.addEventListener("click", function () {
+        const ipAddress = ipInput.value;
+        img1.src = "http://" + ipAddress.trim() + ":" + port1.value + "/stream?topic=/racecar/deepracer/kvs_stream&quality=50";
+
+    });
+    const update2 = document.getElementById("update-2");
+    update2.addEventListener("click", function () {
+        const ipAddress = ipInput.value;
+        img2.src = "http://" + ipAddress.trim() + ":" + port2.value + "/stream?topic=/racecar/deepracer/kvs_stream&quality=50";
+
+    });
+    const update3 = document.getElementById("update-3");
+    update3.addEventListener("click", function () {
+        const ipAddress = ipInput.value;
+        img3.src = "http://" + ipAddress.trim() + ":" + port3.value + "/stream?topic=/racecar/deepracer/kvs_stream&quality=50";
+
+    });
+    const update4 = document.getElementById("update-4");
+    update4.addEventListener("click", function () {
+        const ipAddress = ipInput.value;
+        img4.src = "http://" + ipAddress.trim() + ":" + port4.value + "/stream?topic=/racecar/deepracer/kvs_stream&quality=50";
+
+    });
+    const update5 = document.getElementById("update-5");
+    update5.addEventListener("click", function () {
+        const ipAddress = ipInput.value;
+        img5.src = "http://" + ipAddress.trim() + ":" + port5.value + "/stream?topic=/racecar/deepracer/kvs_stream&quality=50";
+
+    });
+    const update6 = document.getElementById("update-6");
+    update6.addEventListener("click", function () {
+        const ipAddress = ipInput.value;
+        img6.src = "http://" + ipAddress.trim() + ":" + port6.value + "/stream?topic=/racecar/deepracer/kvs_stream&quality=50";
+
+    });
+    const update7 = document.getElementById("update-7");
+    update7.addEventListener("click", function () {
+        const ipAddress = ipInput.value;
+        img7.src = "http://" + ipAddress.trim() + ":" + port7.value + "/stream?topic=/racecar/deepracer/kvs_stream&quality=50";
+
+    });
+    const update8 = document.getElementById("update-8");
+    update8.addEventListener("click", function () {
+        const ipAddress = ipInput.value;
+        img8.src = "http://" + ipAddress.trim() + ":" + port8.value + "/stream?topic=/racecar/deepracer/kvs_stream&quality=50";
+
+    });
+    const update9 = document.getElementById("update-9");
+    update8.addEventListener("click", function () {
+        const ipAddress = ipInput.value;
+        img8.src = "http://" + ipAddress.trim() + ":" + port9.value + "/stream?topic=/racecar/deepracer/kvs_stream&quality=50";
+
+    });
+    const update10 = document.getElementById("update-10");
+    update8.addEventListener("click", function () {
+        const ipAddress = ipInput.value;
+        img8.src = "http://" + ipAddress.trim() + ":" + port10.value + "/stream?topic=/racecar/deepracer/kvs_stream&quality=50";
+
+    });
+</script>
+
+</html>
