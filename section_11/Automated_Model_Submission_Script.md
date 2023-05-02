@@ -1,4 +1,4 @@
-# Automated_Model_Submission in CloudShell
+# Automated Model Submission in CloudShell
 
 ```bash
 # Set variables
@@ -24,7 +24,7 @@ do
         echo "[$(date '+%Y-%m-%d %H:%M:%S')] Error ${response}"
       fi
   fi
-  sleep 60 # 1분 간격으로 실행
+  sleep 60 # Execute at 60 seconds intervals.
 done
 
 ```
