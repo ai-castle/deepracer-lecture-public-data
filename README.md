@@ -5,3 +5,4 @@
 - Link1 : [AWS DeepRacer School (English, subtitles in 20 languages)](https://ai-castle.github.io/aws-deepracer-school-en) 
 - Link2 : [AWS DeepRacer School (Korean, 한국어)](https://ai-castle.github.io/aws-deepracer-school-ko) 
 - The copyright of this material belongs to [AI Castle](https://ai-castle.com).
+- [deepracer-lecture-public-data web Link](https://ai-castle.github.io/deepracer-lecture-public-data/)
