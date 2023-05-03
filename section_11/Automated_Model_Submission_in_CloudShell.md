@@ -1,5 +1,7 @@
 # Automated Model Submission in CloudShell
 
+
+## CloudShell
 ```bash
 # Set variables
 ModelName="my-first-model"
@@ -35,14 +37,16 @@ done
 
 ```
 
-- 브라우저 별 개발자도구 여는 방법 정리: [Link](https://www.computerhope.com/issues/ch002153.htm)
+## Shell sessions 
+- Opening Developer Tools in Various Browsers : [Link](https://www.computerhope.com/issues/ch002153.htm)
 
 ```javascript
-function ConnectButton(){
+function PressEnter(){
     console.log("Connect pushed"); 
-    document.querySelector('#terminal-app').click(); 
+    document.querySelector('textarea.ace_text-input').click(); 
+    document.querySelector('textarea.ace_text-input').dispatchEvent(new KeyboardEvent('keydown',{'keyCode':13}));
 }
-setInterval(ConnectButton, 1000);
+setInterval(PressEnter, 600000);  
 ```
 
 
