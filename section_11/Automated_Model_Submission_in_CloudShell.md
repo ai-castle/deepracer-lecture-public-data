@@ -35,6 +35,8 @@ done
 
 ```
 
+- 브라우저 별 개발자도구 여는 방법 정리: [Link](https://www.computerhope.com/issues/ch002153.htm)
+
 ```javascript
 function ConnectButton(){
     console.log("Connect pushed"); 
